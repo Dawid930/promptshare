@@ -32,16 +32,16 @@ const Feed = () => {
 
   useEffect(() => {
     fetchPosts()
-  }, [])
+  }, [searchText])
 
   const filterPrompts = (searchText) => {
-    const regex = new RegExp(searchText, "i")
-    return allPosts.filter(
-      (post) =>
-        regex.test(post.prompt) ||
-        regex.test(post.tag) ||
-        regex.test(post.creator.username)
-    )
+    return allPosts.filter((post) => {
+      return (
+        post.prompt.toLowerCase().includes(searchText.toLowerCase()) ||
+        post.tag.toLowerCase().includes(searchText.toLowerCase()) ||
+        post.creator.username.toLowerCase().includes(searchText.toLowerCase())
+      )
+    })
   }
 
   const handleSearchChange = (e) => {
