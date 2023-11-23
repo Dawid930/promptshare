@@ -9,7 +9,7 @@ const Home = () => {
         <span className="orange_gradient text-center">AI-Powered Prompts</span>
       </h1>
       <p className="desc text-center">
-        Proptshare as an AI prompting tool that helps you generate ideas for
+        Promptshare as an AI prompting tool that helps you generate ideas for
         your next project.
       </p>
 
