@@ -32,7 +32,7 @@ const Feed = () => {
 
   useEffect(() => {
     fetchPosts()
-  }, [searchText])
+  }, [])
 
   const filterPrompts = (searchText) => {
     return allPosts.filter((post) => {

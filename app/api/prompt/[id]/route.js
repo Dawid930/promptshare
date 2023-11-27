@@ -43,8 +43,7 @@ export const DELETE = async (request, { params }) => {
   try {
     await connectToDB()
 
-    await Prompt.findOneAndDelete(params.id)
-
+    await Prompt.findByIdAndDelete(params.id)
     return new Response("Prompt deleted", { status: 200 })
   } catch (error) {
     console.log(error)
