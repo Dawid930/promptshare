@@ -30,7 +30,7 @@ const Feed = () => {
 
       setAllPosts(data)
     }
-    fetchPosts()
+    if (!searchText) fetchPosts()
   }, [])
 
   const filterPrompts = (searchText) => {
